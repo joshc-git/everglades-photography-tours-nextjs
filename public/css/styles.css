@@ -1,0 +1,860 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #2a2a2a, #3b3b3b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#admin-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#admin-nav img {
+    color: #fff;
+}
+
+#admin-nav img:hover {
+    opacity: 0.85;
+}
+
+#logo {
+    padding: 1.5rem 20px;
+    text-align: center;
+}
+
+#logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+#logo img:hover {
+    opacity: 0.85;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    height: 45px;
+    background-image: linear-gradient(to bottom, #3b3b3b, #2a2a2a);
+    list-style: none; 
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    border-right: 2px solid #202020;
+    border-left: 1px solid #4d4d4d;
+}
+
+nav li:hover {
+    background-image: linear-gradient(to bottom, #3b3b3b, #3b3b3b);
+}
+
+nav li:first-child {
+    border-left: 0;
+}
+
+nav li:last-child {
+    border-right: 0;
+}
+
+nav li a {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .7rem;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 45px;
+    width: 100%; 
+    text-align: center; 
+}
+
+.mobile-nav-menu {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .7rem;
+    color: #fff;
+    line-height: 45px;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+}
+
+.mobile-nav-logout {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: .7rem;
+    color: #fff;
+    line-height: 45px;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+}
+
+nav li button:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+    #admin-nav {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #logo {
+        padding: 2rem 20px 1rem 20px;
+    }
+
+    #logo img {
+        max-width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        height: 45px;
+    }
+
+    nav ul {
+        background-image: linear-gradient(to bottom, #3b3b3b, #2a2a2a);
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul:nth-child(even) {
+        top: 45px;
+    }
+    
+    nav li {
+        width: 100%;
+        border-right: 0;
+        border-left: 0;
+    }
+
+    .mobile-nav ul:first-child li:first-child {
+        background-image: linear-gradient(to bottom, #3b3b3b, #2a2a2a);
+    }
+
+    .mobile-nav ul:first-child li:first-child:hover {
+        background-image: linear-gradient(to bottom, #3b3b3b, #3b3b3b);
+    }
+
+    .mobile-nav li {
+        background-image: linear-gradient(to bottom, #2e2e2e, #2e2e2e);
+        border-top: 1px solid #1e1e1e;
+    }
+    
+    nav li a {
+        font-weight: 400;
+        font-size: .8rem;
+    
+    }
+
+    .mobile-nav-menu {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .mobile-nav-logout {
+        font-size: .8rem;
+        font-weight: 400;
+        color: #fff;
+    }
+
+}
+
+@media only screen and (min-width: 1101px) {
+
+    .mobile-nav {
+        display: none;
+    }
+
+}
+
+.success-message {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    background-color: #deebd8;
+    border: 1px solid #2C662D;
+    color: #2C662D;
+    text-align: center;
+    padding: 20px;
+}
+
+.login {
+    width: 84%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;
+    box-sizing: border-box;
+    padding: 20px 20px 50px 20px;
+    margin-top: 2.5rem;
+}
+
+.login h1 {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    background-color: #ffcc00;
+    padding: .8rem 2rem;
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.login p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 0 6rem;
+    color: #2a2a2a;
+}
+
+#tour-container {
+    width: 84%;
+    display: flex;
+    margin: 0 auto;
+}
+
+#tour-container .tour-card-copy {
+    display: none;
+}
+
+#tour-block {
+    width: 94%;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 25px 50px 25px;
+    margin-top: 1.5rem;
+}
+
+#tour-block h1 {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    background-color: #ffcc00;
+    padding: .8rem 2rem;
+    padding: .6rem 2rem .5rem 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+#tour-block p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0 1.5rem;;
+    color: #2a2a2a;
+}
+
+#intro-block {
+    width: 84%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;
+    box-sizing: border-box;
+    padding: 20px 20px 50px 20px;
+    margin-top: 2.5rem;
+}
+
+#intro-block h1 {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    background-color: #ffcc00;
+    padding: .6rem 2rem .5rem 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+#intro-block p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 0 6rem;
+    margin-bottom: 0;
+    color: #2a2a2a;
+}
+
+.home-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    padding-top: 30px;
+    display: inline-block;
+    padding-bottom: 40px;
+}
+
+#sign-up-copy {
+    width: 100%;
+    height: 547px;
+    position: relative;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#sign-up-copy-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+#sign-up-copy h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+#sign-up-copy p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 20px;
+    color: #fff;
+}
+
+#sign-up-form {
+    position: relative;
+    width: 84%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;
+    box-sizing: border-box;
+    padding: 20px 20px 50px 20px;
+    margin-top: -140px;
+    margin-bottom: 0;
+}
+
+#sign-up-form h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    color: #2a2a2a;
+    margin-bottom: .5rem;
+}
+
+#sign-up-form ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+#sign-up-form li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+#sign-up-form p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    line-height: 1.5rem;
+    padding-top: 30px;
+}
+
+#sign-up-form fieldset {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 0;
+}
+
+#sign-up-form fieldset button {
+    margin-top: 15px;
+}
+
+#sign-up-form input {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+#sign-up-form textarea {
+    width: 100%;
+    height: 150px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+#sign-up-form .error {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    padding-bottom: 5px;
+    display: block;
+    color: darkred;
+    text-align: left;
+}
+
+.large-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    background-image: linear-gradient(to bottom, #4355a5, #2a418c);
+    padding: .6rem 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.large-button:hover {
+    background-image: linear-gradient(to bottom, #2a418c, #2a418c);
+}
+
+.large-button:disabled {
+    background-image: linear-gradient(to bottom, #cecece, #b4b4b4);
+    color: #8a8a8a;
+    cursor: auto;
+}
+
+.small-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    background-image: linear-gradient(to bottom, #4355a5, #2a418c);
+    padding: .6rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.small-button:hover {
+    background-image: linear-gradient(to bottom, #2a418c, #2a418c);
+}
+
+.small-button:disabled {
+    background-image: linear-gradient(to bottom, #cecece, #b4b4b4);
+    color: #8a8a8a;
+    cursor: auto;
+}
+
+.tour-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-tour-card-container {
+    display: block;
+    width: 84%;
+    margin: 0 auto;
+}
+
+.single-tour-card-container .tour-card:nth-child(odd) {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tour-card {
+    background-color: #f3f3f3;
+    box-shadow: 2px 2px 2px #ccc;
+    box-sizing: border-box;
+    padding: 10px 10px 50px 10px;
+    margin-top: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.tour-card:nth-child(odd) {
+    flex-basis: 40.5%;
+    margin-left: 8%;
+    margin-right: 1.5%
+}
+
+.tour-card:nth-child(even) {
+    flex-basis: 40.5%;
+    margin-right: 8%;
+    margin-left: 1.5%;
+}
+
+.sold-out {
+    width: 190px;
+    height: 190px;
+    background: url(/images/sold-out.png) no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.tour-card button {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.tour-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tour-card-copy {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.tour-card-copy h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #2a2a2a;
+    margin-top: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.tour-card-copy p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #2a2a2a;
+}
+
+.tour-card-copy fieldset {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+.tour-card-copy fieldset button {
+    margin-top: 15px;
+}
+
+.tour-card-copy fieldset label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    float: left;
+}
+
+.tour-card-copy input {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.tour-card-copy textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    padding: 13px;
+    box-sizing: border-box;
+}
+
+.tour-card-details {
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.tour-card-details h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #2a2a2a;
+    display: block;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 10px 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.tour-card-details-copy {
+    background-color: #e8e8e8;
+    border-left: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.tour-card-details-copy ul {
+    margin: 0;
+    padding: 0;
+}
+
+.tour-card-details-copy li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #2a2a2a;
+    list-style: none;
+    line-height: 1.8rem;
+}
+
+.tour-card-details-copy p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2a2a2a;
+}
+
+.tour-details-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .large-button {
+        font-size: 1.3rem;
+    }
+
+    #tour-block {
+        padding: 20px 25px 15px 25px;
+        margin-top: 1rem;
+    }
+
+    #tour-block h1 {
+        font-size: 1.3rem;
+    }
+
+    #tour-block p {
+        font-size: 1rem;
+        padding: 0 0;
+    }
+
+    #intro-block {
+        margin-top: 1rem;
+    }
+
+    #intro-block h1 {
+        font-size: 1.1rem;
+    }
+
+    #intro-block p {
+        font-size: 1rem;
+        padding: 0 .5rem;
+    }
+
+    .tour-card {
+        margin-top: 1rem;
+    }
+
+    .tour-card-copy {
+        padding: 0 1rem;
+    }
+
+    .tour-card-copy h2 {
+        font-size: 1.7rem;
+    }
+
+    .tour-card-details {
+        padding: 0;
+    }
+
+    .tour-card-details h2 {
+        font-size: 1.3rem;
+    }
+
+    #sign-up-copy {
+        height: auto;
+    }
+
+    #sign-up-copy h1 {
+        font-size: 2.1rem;
+    }
+
+    #sign-up-form {
+        width: 94%;
+        margin-top: 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 1024px) {
+
+    #sign-up-form {
+        width: 94%;
+        margin-top: -80px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #tour-container {
+        width: 94%;
+        flex-direction: column;
+    }
+
+    .single-tour-card-container .tour-card-copy {
+        display: block !important;
+    }
+
+    #tour-block {
+        display: none;
+    }
+
+    #intro-block {
+        width: 94%;
+    }
+
+    .single-tour-card-container {
+        width: 94%;
+    }
+
+    .tour-card:nth-child(odd) {
+        flex-basis: 94%;
+        margin-left: 3%;
+        margin-right: 3%
+    }
+    
+    .tour-card:nth-child(even) {
+        flex-basis: 94%;
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    .tour-card-container {
+        flex-direction: column;
+    }
+
+    #sign-up-copy {
+        background-attachment: scroll;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 1025px) {
+
+    #tour-container {
+        width: 94%;
+    }
+
+    #intro-block {
+        width: 94%;
+    }
+
+    #sign-up-form {
+        width: 94%;
+    }
+
+    .tour-card:nth-child(odd) {
+        flex-basis: 45.5%;
+        margin-left: 3%;
+        margin-right: 1.5%
+    }
+    
+    .tour-card:nth-child(even) {
+        flex-basis: 45.5%;
+        margin-right: 3%;
+        margin-left: 1.5%;
+    }
+
+}
+
+footer {
+    background-image: linear-gradient(to bottom, #2a2a2a, #3b3b3b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+#copyright p {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    color: #fff;
+    padding: 1rem 20px;
+}
+
+#copyright a {
+    color: #fff;
+}
+

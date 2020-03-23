@@ -8,7 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "firebase": "^7.12.0",
     "next": "9.3.1",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "re-base": "^4.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
