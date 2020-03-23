@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Router from 'next/router';
 import AdminCard from './AdminCard';
 import ReservationsCard from './ReservationsCard';
@@ -8,11 +9,16 @@ class TourCard extends React.Component {
         Router.push({pathname: '/sign-up', query: { id: this.props.tour.id },}).then(() => window.scrollTo(0, 0));
     }
 
+    slugify = (string) => {
+        return '/' + string.toString().toLowerCase().replace(/\s+/g, '-');
+    }
+
     render () {
         const {title, photo, desktopPhoto, shortDescription, location, availability, dateTime, price} = this.props.tour;
         const isAdmin = this.props.isAdmin;
         const isReservations = this.props.isReservations;
         const isAvailable = this.props.tour.availability;
+        const slug = this.slugify(this.props.tour.title);
         if (isAdmin) {
             return (
                 <AdminCard index={this.props.index} tour={this.props.tour} updateTour={this.props.updateTour} />
@@ -36,7 +42,7 @@ class TourCard extends React.Component {
                 </div>
                 <div className="tour-card-copy">
                     <h2>{title}</h2>
-                    <p>{shortDescription}</p>
+                    <p>{shortDescription}<br /><Link href={slug}><a>Read More...</a></Link></p>
                 </div>
                 <div className="tour-card-details">
                     <h2>Tour Details</h2>

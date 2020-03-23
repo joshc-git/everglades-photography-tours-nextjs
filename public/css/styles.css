@@ -575,7 +575,7 @@ nav li button:focus {
     padding: 0 2rem;
 }
 
-.tour-card-copy h2 {
+.tour-card-copy > h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -588,6 +588,12 @@ nav li button:focus {
     font-size: 1rem;
     line-height: 1.5rem;
     color: #2a2a2a;
+}
+
+.tour-card-copy a {
+    color: #2a2a2a;
+    display: inline-block;
+    margin-top: 9px;
 }
 
 .tour-card-copy fieldset {
@@ -644,7 +650,6 @@ nav li button:focus {
     font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    text-transform: uppercase;
     color: #2a2a2a;
     display: block;
     border-top: 1px solid #2a2a2a;
