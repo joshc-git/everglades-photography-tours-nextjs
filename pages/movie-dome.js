@@ -3,6 +3,10 @@ import Head from 'next/head';
 import TourCard from '../components/TourCard';
 
 class MovieDome extends React.Component {
+  createMarkup = () => {
+    return {__html: this.props.tours[0].longDescription};
+  }
+
   render() {
     return (
         <>
@@ -16,7 +20,7 @@ class MovieDome extends React.Component {
                 </div>
                 <div id="tour-block">
                     <h1>{this.props.tours[0].title}</h1>
-                    <p>{this.props.tours[0].longDescription}</p>
+                    <p dangerouslySetInnerHTML={this.createMarkup()} />
                     <div id="tour-block-equipment">
                       <h2>Activities/Gear</h2>
                       <ul>

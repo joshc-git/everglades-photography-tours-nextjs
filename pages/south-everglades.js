@@ -3,6 +3,10 @@ import Head from 'next/head';
 import TourCard from '../components/TourCard';
 
 class SouthEverglades extends React.Component {
+  createMarkup = () => {
+    return {__html: this.props.tours[6].longDescription};
+  }
+
   render() {
     return (
         <>
@@ -16,7 +20,7 @@ class SouthEverglades extends React.Component {
                 </div>
                 <div id="tour-block">
                     <h1>{this.props.tours[6].title}</h1>
-                    <p>{this.props.tours[6].longDescription}</p>
+                    <p dangerouslySetInnerHTML={this.createMarkup()} />
                     <div id="tour-block-equipment">
                       <h2>Activities/Gear</h2>
                       <ul>
