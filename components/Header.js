@@ -21,7 +21,7 @@ class Header extends React.Component {
         return (
             <header>
                 <div id="admin-nav">
-                <Link href="/admin"><a><img src="../images/admin.svg" width="31" height="25" alt="admin" /></a></Link>
+                <Link href="/admin"><a><img src="../images/admin.svg" width="31" height="25" alt="Admin" /></a></Link>
                 </div>
                 <div id="logo">
                     <Link href="/"><a><img src="../images/logo.png" width="640" height="90" alt="Everglades Photography Tours" /></a></Link>

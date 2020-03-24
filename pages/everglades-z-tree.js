@@ -17,6 +17,14 @@ class EvergladesZTree extends React.Component {
                 <div id="tour-block">
                     <h1>{this.props.tours[1].title}</h1>
                     <p>{this.props.tours[1].longDescription}</p>
+                    <div id="tour-block-equipment">
+                      <h2>Activities/Gear</h2>
+                      <ul>
+                        <li><img src="../images/image-solid.svg" width="81" height="70" alt="Landscape" /><br />Landscape</li>
+                        <li><img src="../images/moon-solid.svg" width="81" height="70" alt="Nighttime" /><br />Nighttime</li>
+                        <li><img src="../images/bug-solid.svg" width="81" height="70" alt="Bug Spray" /><br />Bug Spray</li>
+                      </ul>
+                    </div>
                 </div>
               </div>
           </main>

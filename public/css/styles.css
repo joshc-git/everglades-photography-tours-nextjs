@@ -296,6 +296,37 @@ nav li button:focus {
     color: #2a2a2a;
 }
 
+#tour-block-equipment h2 {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    background-color: #2a2a2a;
+    padding: .8rem 2rem;
+    padding: .6rem 2rem .5rem 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+#tour-block-equipment ul {
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+#tour-block-equipment li {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8rem;
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px 15px 15px;
+}
+
+#tour-block-equipment img {
+    margin-bottom: 13px;
+}
+
 #intro-block {
     width: 84%;
     margin: 0 auto;
@@ -591,8 +622,10 @@ nav li button:focus {
 }
 
 .tour-card-copy a {
+    font-family: 'Roboto', sans-serif;
     color: #2a2a2a;
     display: inline-block;
+    font-weight: 500;
     margin-top: 9px;
     margin-bottom: 5px;
 }
@@ -646,7 +679,8 @@ nav li button:focus {
 }
 
 .tour-card-details {
-    padding: 0 2rem;
+    margin: 0 2rem;
+    box-shadow: 1px 1px 1px #939393;
     text-align: center;
 }
 
@@ -656,18 +690,14 @@ nav li button:focus {
     font-weight: 400;
     color: #2a2a2a;
     display: block;
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
+    background-color: #e1e1e1;
     padding: 10px 0;
     margin-bottom: 0;
     text-align: center;
 }
 
 .tour-card-details-copy {
-    background-color: #e8e8e8;
-    border-left: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8;
-    border-right: 1px solid #d8d8d8;
+    background-color: #fcfcfc;
     padding: 25px 15px;
     text-align: center;
 }
@@ -709,7 +739,7 @@ nav li button:focus {
     }
 
     #tour-block h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     #tour-block p {
@@ -722,7 +752,7 @@ nav li button:focus {
     }
 
     #intro-block h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     #intro-block p {
@@ -742,14 +772,6 @@ nav li button:focus {
         font-size: 1.7rem;
     }
 
-    .tour-card-details {
-        padding: 0;
-    }
-
-    .tour-card-details h2 {
-        font-size: 1.3rem;
-    }
-
     #sign-up-copy {
         height: auto;
     }
@@ -765,6 +787,14 @@ nav li button:focus {
 
     #sign-up-form h2 {
         font-size: 1.6rem;
+    }
+
+    #tour-block-equipment h2 {
+        font-size: 1.2rem;
+    }
+
+    #tour-block-equipment img {
+        max-width: 80%;
     }
 
 }
@@ -832,6 +862,14 @@ nav li button:focus {
 
     .tour-card-container {
         flex-direction: column;
+    }
+
+    .tour-card-details {
+        margin: 0;
+    }
+
+    .tour-card-details h2 {
+        font-size: 1.3rem;
     }
 
     #sign-up-copy {
