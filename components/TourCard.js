@@ -42,7 +42,7 @@ class TourCard extends React.Component {
                 </div>
                 <div className="tour-card-copy">
                     <h2>{title}</h2>
-                    <p>{shortDescription}<br /><Link href={slug}><a>Read More...</a></Link></p>
+                    <p>{shortDescription}<br /><Link href={slug}><a>View Tour Description</a></Link></p>
                 </div>
                 <div className="tour-card-details">
                     <h2>Tour Details</h2>

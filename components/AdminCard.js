@@ -73,7 +73,7 @@ class AdminCard extends React.Component {
                             <p>Tour details have been successfully updated!</p>
                         </div>
                     ) : (
-                    <form onSubmit={this.handleSubmit} ref={this.targetRef}>
+                    <form onSubmit={this.handleSubmit} ref={this.targetRef} className="admin-form">
                         <fieldset>
                             <label>Short Description:</label>
                             <textarea name="shortDescription" ref={this.shortDescriptionRef} onChange={this.handleChange} value={this.state.tour.shortDescription} /><br />

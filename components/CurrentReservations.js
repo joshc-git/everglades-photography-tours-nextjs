@@ -4,7 +4,7 @@ class CurrentReservation extends React.Component {
     render () {
         return (
             <>
-            <div className="tour-card-details">
+            <div className="tour-card-details current-reservation">
                 <h2>{this.props.reservation.name}</h2>
                 <div className="tour-card-details-copy">
                     <ul>

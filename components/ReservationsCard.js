@@ -16,10 +16,10 @@ class ReservationsCard extends React.Component {
                 </div>
                 <div className="tour-card-copy">
                     <h2>{title}</h2>
-                    {this.props.reservations.length > 0 && (
-                        this.props.reservations.filter(reservation => reservation.tourId === this.props.tour.id).map(reservation => <CurrentReservations key={reservation.id} index={reservation.id} reservations={this.props.reservations} reservation={reservation} deleteReservation={this.props.deleteReservation} />))
-                    }
                 </div>
+                {this.props.reservations.length > 0 && (
+                    this.props.reservations.filter(reservation => reservation.tourId === this.props.tour.id).map(reservation => <CurrentReservations key={reservation.id} index={reservation.id} reservations={this.props.reservations} reservation={reservation} deleteReservation={this.props.deleteReservation} />))
+                }
             </div>
         )
     }
